@@ -1,0 +1,67 @@
+  <html>
+    <head>
+      <title>Swagger API Error</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="icon" type="image/x-icon"  href="icon.png">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"> </script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"> </script>
+      <!-- Custom Css and js -->
+      <script type="text/javascript" src="js/Index.js"> </script>
+      <link rel="stylesheet" type="text/css" href="css/Index.css">
+      <link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+
+      <!-- to hide the button -->
+      <script type="text/javascript">
+      $(document).ready(function(){
+        $("#filebutton").click(function(){
+          $(this).hide();
+          $('.header').show();
+
+        });
+      });
+
+      
+      </script>
+    </head>
+    
+
+    <body>
+    <input id="filebutton"  type='file' accept='text/plain' onchange='openFile(event)'>
+    <div class="body" >
+      <div class="header">
+        <div class="heading">
+          <h3>Error Log's</h3>
+        </div>
+        <div class="filter">
+          <span class="filter_heading">Filter:</span>
+          <div class="dropdown">
+            <select autofocus name="Choose One" id="dropdownSelect">
+              <option value="Level">Level</option>
+              <option value="Date">Date</option>
+              <option value="Logger">Logger</option>
+              <option value="Message">Message</option>
+          </select>
+          </div>
+          <div class="filterSearch">
+            <input type="text" id="myInput" onkeyup="filterSearch(this.value, event)" placeholder="Search for item...">
+          </div>
+        </div>
+      </div>
+      <div id="body-section" class="container-fluid">
+        <div class="logData row">
+          <div class="data col-md-12">
+          
+          </div>
+        </div>
+      </div>
+
+    </div>
+    </body>
+  </html>
+
+
+
